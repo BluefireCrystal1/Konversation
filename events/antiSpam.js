@@ -1,3 +1,4 @@
+const allowSpam = require('../models/allowSpam')
 const mongoose = require('mongoose')
 const warnModel = require('../models/warnsSchema')
 const { MessageEmbed } = require('discord.js')
@@ -7,7 +8,11 @@ module.exports = {
     name: 'messageCreate',
     once: false,
     async execute(message) {
+        allowSpam.findOne({ guildId: message.guild.id }, async (err, data) => {
+            if (!data) return
+            let chnl = message.client.channels.cache.get(data.channelId);
             if (message.author.bot) return;
+            if(message.channel === chnl) return;
             if (!message.member.permissions.has("ADMINISTRATOR")) {
             }
             if (usersMap.has(message.author.id)) {
@@ -38,5 +43,7 @@ module.exports = {
                     timer: null
                 })
             }
+        }
+        )
     }
 }
