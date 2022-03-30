@@ -11,8 +11,8 @@ module.exports = {
         allowSpam.findOne({ guildId: message.guild.id }, async (err, data) => {
             if (!data) return
             let chnl = message.client.channels.cache.get(data.channelId);
-            if (message.author.bot) return;
             if(message.channel === chnl) return;
+            if (message.author.bot) return;
             if (!message.member.permissions.has("ADMINISTRATOR")) {
             }
             if (usersMap.has(message.author.id)) {
