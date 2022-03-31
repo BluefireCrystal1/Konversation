@@ -13,7 +13,7 @@ module.exports = {
                          1) Moderation
                          2) Info
                          3) Config`)
-        .setColor("RANDOM")
+        .setColor("PURPLE")
         .setFooter({ text: `Requested by ${interaction.member.user.username}`, iconURL: interaction.member.displayAvatarURL() })
         .setTimestamp()
 
