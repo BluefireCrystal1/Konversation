@@ -1,5 +1,6 @@
 # **| Konversation**
 
+
 > - Moderation
 > - Moderation Commands
 > - **_Slash commands (NEW!)_**
@@ -56,6 +57,9 @@ Set a channel to be mod logs so the bot can capture any Message Deleted, Invite 
 
 ## Moderation Features
 
-> - AutoWarns ( Max 3)
+> - AutoWarns ( Max 3 )
 > - Anti Mass Mention
 > - Anti Spam
+
+
+![Konversation](./assets/Logo.png "Konversation")
