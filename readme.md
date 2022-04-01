@@ -60,6 +60,7 @@ Set a channel to be mod logs so the bot can capture any Message Deleted, Invite 
 > - AutoWarns ( Max 3 )
 > - Anti Mass Mention
 > - Anti Spam
+> - Mod-Logs system _(Multiguild support!)_
 
 
 ![Konversation](./assets/Logo.png "Konversation")
