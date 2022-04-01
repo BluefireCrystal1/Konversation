@@ -44,7 +44,8 @@ for (const file of commandFiles) {
 }
 // ----
 
-
-
+process.on('unhandledRejection', error => {
+    console.error("Error: " + error)
+});
 
 client.login(process.env.TOKEN)
