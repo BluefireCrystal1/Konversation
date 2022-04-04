@@ -1,3 +1,4 @@
+const { SlashCommandBuilder } = require('@discordjs/builders');
 require('dotenv').config()
 const fs = require('node:fs');
 const { Client, Intents, Collection, MessageEmbed, GuildMember, MessageAttachment, Message } = require('discord.js');
