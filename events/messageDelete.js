@@ -11,7 +11,7 @@ module.exports = {
             let channel = message.client.channels.cache.get(data.channelId);
             if (message.content == null) return;
             const embed = new MessageEmbed()
-                .setTitle("Message Deleted!")
+                .setTitle(`Message Deleted in ${message.channel}!`)
                 .setTimestamp()
                 .setColor("RED")
                 .setDescription(message.content)
