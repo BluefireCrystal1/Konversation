@@ -19,7 +19,7 @@ module.exports = {
                     .setFooter({ text: `Requested by ${interaction.member.user.username}`, iconURL: interaction.member.displayAvatarURL() })
                     .setTimestamp()
 
-                await interaction.editReply({ embeds: [embed] })
+                await interaction.update({ embeds: [embed] })
             }
             if (interaction.values == "info_option") {
                 const embed = new MessageEmbed()
@@ -32,7 +32,7 @@ module.exports = {
                     .setFooter({ text: `Requested by ${interaction.member.user.username}`, iconURL: interaction.member.displayAvatarURL() })
                     .setTimestamp()
 
-                await interaction.editReply({ embeds: [embed] })
+                await interaction.update({ embeds: [embed] })
             }
             if (interaction.values == "config_option") {
                 const embed = new MessageEmbed()
@@ -42,7 +42,7 @@ module.exports = {
                     .setFooter({ text: `Requested by ${interaction.member.user.username}`, iconURL: interaction.member.displayAvatarURL() })
                     .setTimestamp()
 
-                await interaction.editReply({ embeds: [embed] })
+                await interaction.update({ embeds: [embed] })
             }
         }
     }
