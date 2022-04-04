@@ -1,5 +1,6 @@
 const { MessageEmbed } = require('discord.js');
 const mongoose = require('mongoose')
+const wait = require('node:timers/promises').setTimeout;
 
 module.exports = {
     name: 'interactionCreate',
@@ -19,7 +20,9 @@ module.exports = {
                     .setFooter({ text: `Requested by ${interaction.member.user.username}`, iconURL: interaction.member.displayAvatarURL() })
                     .setTimestamp()
 
-                await interaction.channel.send({ embeds: [embed], ephermal: true })
+                await interaction.deferUpdate();
+                await wait(4000);
+                await interaction.editReply({ embeds: [embed], ephermal: true })
             }
             if (interaction.values == "info_option") {
                 const embed = new MessageEmbed()
@@ -32,7 +35,9 @@ module.exports = {
                     .setFooter({ text: `Requested by ${interaction.member.user.username}`, iconURL: interaction.member.displayAvatarURL() })
                     .setTimestamp()
 
-                await interaction.channel.send({ embeds: [embed], ephermal: true })
+                await interaction.deferUpdate();
+                await wait(4000);
+                await interaction.editReply({ embeds: [embed], ephermal: true })
             }
             if (interaction.values == "config_option") {
                 const embed = new MessageEmbed()
@@ -42,7 +47,9 @@ module.exports = {
                     .setFooter({ text: `Requested by ${interaction.member.user.username}`, iconURL: interaction.member.displayAvatarURL() })
                     .setTimestamp()
 
-                    await interaction.channel.send({ embeds: [embed], ephermal: true })
+                await interaction.deferUpdate();
+                await wait(4000);
+                await interaction.editReply({ embeds: [embed], ephermal: true })
             }
         }
     }
