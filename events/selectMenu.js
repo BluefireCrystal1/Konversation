@@ -21,7 +21,7 @@ module.exports = {
                     .setTimestamp()
 
                 await interaction.deferUpdate();
-                await wait(4000);
+                await wait(2000);
                 await interaction.editReply({ embeds: [embed], ephermal: true })
             }
             if (interaction.values == "info_option") {
@@ -36,7 +36,7 @@ module.exports = {
                     .setTimestamp()
 
                 await interaction.deferUpdate();
-                await wait(4000);
+                await wait(2000);
                 await interaction.editReply({ embeds: [embed], ephermal: true })
             }
             if (interaction.values == "config_option") {
@@ -48,7 +48,7 @@ module.exports = {
                     .setTimestamp()
 
                 await interaction.deferUpdate();
-                await wait(4000);
+                await wait(2000);
                 await interaction.editReply({ embeds: [embed], ephermal: true })
             }
         }
