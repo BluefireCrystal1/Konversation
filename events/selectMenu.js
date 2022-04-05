@@ -6,6 +6,7 @@ module.exports = {
     once: false,
     async execute(interaction) {
         if (!interaction.isSelectMenu()) return;
+        console.log(interaction)
 
         if (interaction.customId === 'select') {
             if (interaction.values == "moderation_option") {

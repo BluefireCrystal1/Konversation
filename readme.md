@@ -52,8 +52,14 @@ See all the commands
 > - `/info [user, channel, server]`
 Get info about a user, a channel or the server you're running the command in!
 
->- `setup-modlogs`
+>- `/setup-modlogs`
 Set a channel to be mod logs so the bot can capture any Message Deleted, Invite created, Invite deleted, Channel created, Channel deleted, Role Created, Role deleted
+
+> - `/warn`
+Warn a user
+
+> - `/warns`
+Check how many warns someone has
 
 ## Moderation Features
 
